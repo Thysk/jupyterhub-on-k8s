@@ -16,15 +16,15 @@ sudo apt-get install -y docker.io
 
 # Install Kubernetes
 echo 
-echo "##### Installing Kubernetes 1.18.1"
+echo "##### Installing Kubernetes 1.23.0"
 sudo sh -c "echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' >> /etc/apt/sources.list.d/kubernetes.list"
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 sudo apt-get update && sudo apt-get install -y \
-  kubelet=1.20.0-00 \
-  kubeadm=1.20.0-00 \
-  kubectl=1.20.0-00
+  kubelet=1.23.0-00 \
+  kubeadm=1.23.0-00 \
+  kubectl=1.23.0-00
 # Hold the versions to prevent automatic upgrades leading to incompatibilities
 sudo apt-mark hold docker-ce kubelet kubeadm kubectl
 
